@@ -1,0 +1,273 @@
+.section {
+  padding: 88px 0 96px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 92% 5%, rgba(2, 150, 90, 0.1), transparent 28rem),
+    var(--light-surface-container-low);
+
+  @media (max-width: 700px) { padding: 56px 0 64px; }
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--light-outline-variant);
+
+  @media (max-width: 800px) {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+
+.headingContent { max-width: 680px; }
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--light-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  color: var(--light-on-surface);
+  font-size: clamp(2.25rem, 4vw, 3.5rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.intro {
+  max-width: 590px;
+  margin-top: 16px !important;
+  color: var(--light-on-surface-variant);
+  font-size: 1.05rem !important;
+  line-height: 1.65 !important;
+}
+
+.reviewSummary {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border: 1px solid var(--light-outline-variant);
+  border-radius: 14px;
+  background: var(--light-surface-container-lowest);
+  box-shadow: 0 10px 30px rgba(0, 26, 83, 0.06);
+}
+
+.googleMark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ratingLine {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  strong { color: var(--light-on-surface); font-size: 1.25rem; }
+}
+
+.summaryStars {
+  display: flex;
+  color: #f9ab00;
+  svg { font-size: 1.05rem; }
+}
+
+.reviewCount {
+  display: block;
+  margin-top: 2px;
+  color: var(--light-on-surface-variant);
+  font-size: 0.8rem;
+}
+
+.carouselHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0 18px;
+}
+
+.featuredLabel { color: var(--light-on-surface) !important; font-weight: 600 !important; }
+
+.controls {
+  display: flex;
+  gap: 8px;
+
+  button {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    place-items: center;
+    border: 1px solid var(--light-outline-variant);
+    border-radius: 50%;
+    background: var(--light-surface-container-lowest);
+    color: var(--light-primary);
+    cursor: pointer;
+    transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+
+    &:hover, &:focus-visible {
+      border-color: var(--light-primary);
+      background: var(--light-primary);
+      color: var(--light-on-primary);
+      outline: none;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.carousel {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  max-width: none;
+  margin-right: 0;
+  margin-left: -50vw;
+
+  :global(.embla__container) {
+    align-items: flex-start;
+  }
+}
+
+.slide {
+  display: flex;
+  min-height: 310px;
+  padding: 24px;
+  flex-direction: column;
+  border: 1px solid var(--light-outline-variant);
+  border-radius: 14px;
+  background: var(--light-surface-container-lowest);
+  box-shadow: 0 8px 28px rgba(0, 26, 83, 0.05);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+
+  &:hover, &:focus-within {
+    border-color: rgba(0, 26, 83, 0.32);
+    box-shadow: 0 16px 38px rgba(0, 26, 83, 0.1);
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: 550px) { min-height: 290px; padding: 22px; }
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > svg { width: 68px; height: auto; }
+}
+
+.stars { display: flex; gap: 1px; }
+
+.descriptionWrapper {
+  position: relative;
+  margin: 22px 0 26px;
+  flex: 1;
+
+  p { color: var(--light-on-surface); font-size: 0.98rem; line-height: 1.65; }
+
+  .readMorebutton {
+    margin-top: 8px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--light-primary);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    &:hover, &:focus-visible { text-decoration: underline; }
+  }
+}
+
+.profileWrapper {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-top: 18px;
+  border-top: 1px solid var(--light-outline-variant);
+
+  img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+}
+
+.avatarFallback {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--light-primary-container);
+  color: var(--light-on-primary);
+  font-weight: 700;
+}
+
+.nameWrapper {
+  min-width: 0;
+  flex: 1;
+
+  h3 {
+    overflow: hidden;
+    color: var(--light-on-surface);
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  span { color: var(--light-on-surface-variant); font-size: 0.76rem; }
+}
+
+.reviewLink {
+  color: var(--light-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  &:hover, &:focus-visible { text-decoration: underline; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide, .controls button { transition: none; }
+}
+
+/* Compact review badge used in hero and form sections. */
+.reviewWrapper {
+  max-width: fit-content;
+  padding: 8px 16px;
+  border: 1px solid var(--light-outline-variant);
+  border-radius: 50px;
+  background: var(--light-surface-container-lowest);
+
+  @media(max-width: 400px) { justify-content: center; padding: 8px; }
+
+  .reviewerPicsWrapper {
+    .reviewerPic {
+      margin-left: -8px;
+      border: 2px solid var(--light-surface-container-lowest);
+      border-radius: 50%;
+    }
+
+    .reviewerPic:first-child {
+      margin-left: 0;
+      @media(max-width: 365px) { display: none; }
+    }
+
+    .reviewerPic:nth-child(2) {
+      @media(max-width: 325px) { display: none; }
+    }
+  }
+}
