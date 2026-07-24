@@ -41,7 +41,7 @@ export default function UspTable({ uspTableData }) {
               fill 
             /> */}
              <Typography variant="h6" component="div" align="center" className={`${styles.text}`}>
-            Whangarei Movers
+            Town Movers
             </Typography>
           </div>
           <div

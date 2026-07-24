@@ -94,7 +94,7 @@ const buildEmailHtml = ({ fields, formName, replyToEmail }) => {
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width: 680px; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e5e7eb;">
             <tr>
               <td style="background: #0f172a; padding: 24px 28px;">
-                <p style="margin: 0 0 8px; color: #93c5fd; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;">Whangarei Movers</p>
+                <p style="margin: 0 0 8px; color: #93c5fd; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;">Town Movers</p>
                 <h1 style="margin: 0; color: #ffffff; font-size: 24px; line-height: 1.25;">New ${escapeHtml(formName)}</h1>
               </td>
             </tr>
@@ -126,7 +126,7 @@ const buildEmailHtml = ({ fields, formName, replyToEmail }) => {
             }
             <tr>
               <td style="padding: 18px 28px; background: #f9fafb; color: #6b7280; font-size: 12px; line-height: 1.5;">
-                Sent from the Whangarei Movers website form.
+                Sent from the Town Movers website form.
               </td>
             </tr>
           </table>
@@ -173,7 +173,7 @@ export async function POST(req) {
 
     const formData = new URLSearchParams();
     const fields = parseMessageFields(message);
-    formData.append("from", `Whangarei Movers Website <${FROM_EMAIL}>`);
+    formData.append("from", `Town Movers Website <${FROM_EMAIL}>`);
     formData.append("h:Reply-To", email);
     formData.append("to", RECIPIENT_EMAIL);
     formData.append("subject", formName.replace(/[\r\n]/g, " ").trim());
