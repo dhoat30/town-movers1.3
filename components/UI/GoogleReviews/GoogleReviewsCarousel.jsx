@@ -162,7 +162,7 @@ export default function GoogleReviewsCarousel({ data }) {
   });
 
   return (
-    <section className={styles.section} aria-labelledby="google-reviews-title">
+    <section className={styles.section} aria-labelledby="google-reviews-title" id="google-reviews">
       <Container maxWidth="xl" className={styles.container}>
         <div className={styles.titleRow}>
           <div className={styles.headingContent}>
