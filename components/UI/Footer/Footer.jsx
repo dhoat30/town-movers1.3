@@ -24,7 +24,7 @@ export default function Footer({
           <div className={`${styles.footerWrapper}`}>
             <div className={`${styles.footerMessage}`}>
               <Typography component="p" variant="overline" className={`${styles.eyebrow}`}>
-                Whangarei Movers
+                Town Movers
               </Typography>
               <Typography component="h2" variant="h5" className={`${styles.messageTitle}`}>
                 Ready for a smoother move?
